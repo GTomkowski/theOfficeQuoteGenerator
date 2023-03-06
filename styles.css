@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62.5%;
+	background-color: bisque;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 1400px;
+	height: 100vh;
+	margin: 0 auto;
+	font-size: 1.8rem;
+}
+
+.card {
+	height: 400px;
+	width: 600px;
+	border: 2px solid black;
+	overflow: hidden;
+	background-color: white;
+}
+
+.card__title {
+	height: 15%;
+	font-size: 1.8rem;
+	text-align: center;
+	padding: 5px;
+}
+
+.card__image {
+	position: relative;
+	height: 85%;
+
+	background-position: center;
+	background-size: cover;
+}
+
+.card__arrow {
+	position: absolute;
+	bottom: 8px;
+	font-size: 3.4rem;
+
+	padding: 5px;
+	color: white;
+}
+
+.card__arrow--left {
+	left: 8px;
+}
+
+.card__arrow--right {
+	right: 8px;
+}
+
+.card__image--1 {
+	background-image: url("./images/pamBeesly.avif");
+}
+.card__image--2 {
+	background-image: url("./images/ryanHoward.webp");
+}
+.card__image--3 {
+	background-image: url("./images/dwightSchrute.jpeg");
+}
+.card__image--4 {
+	background-image: url("./images/intro-1600107071.jpg");
+}
+.card__image--5 {
+	background-image: url("./images/jim2.jpeg");
+}
+.card__image--6 {
+	background-image: url("./images/andyBernard.webp");
+}
+.card__image--7 {
+	background-image: url("./images/phyllisVance.jpeg");
+}
+.card__image--8 {
+	background-image: url("./images/angela.avif");
+}
+.card__image--9 {
+	background-image: url("./images/oscar.jpeg");
+}
+.card__image--10 {
+	background-image: url("./images/kellyKapoor.jpeg");
+}
+.card__image--11 {
+	background-image: url("./images/kevinSecond.png");
+}
+.card__image--12 {
+	background-image: url("./images/nateNickerson.jpeg");
+}
+.card__image--13 {
+	background-image: url("./images/stanley.jpeg");
+}
+
+.quote {
+	height: 50px;
+	margin-top: 1.2rem;
+	padding: 1rem;
+	text-align: center;
+	font-size: 1.4rem;
+}
