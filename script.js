@@ -1,16 +1,4 @@
-// nasluchujac na przycisk bedziemy chcieli zmienic zdjecie
 
-// umiescic zdjecia w tablicy i zmieniac indeks w zaleznosci od tego czy sie kliknie przycisk w lewo czy w prawo?
-
-// czy to jest spoko pomysl?
-
-// zalozmy ['Michael','Dwight','Jim','Pam','Andy','Phyllis','Stanley']
-
-// w zaleznosci od tego ktory indeks tablicy jest obecnie wybrany, zmieniaja sie klasy na divie ze zdjeciem
-
-// bedzie trzeba zrobic nasluchiwanie na buttona, jak sie najedzie na strzalke, zmienia sie zdjecie
-
-// jednoczesnie przy zmianie zdjecia zmienia sie tez funkcja, beda proponowane inne cytaty
 
 const names = [
 	"Pam",
@@ -50,24 +38,6 @@ const rightArrow = document.querySelector(".card__arrow--right");
 const cardImage = document.querySelector(".card__image");
 const title = document.querySelector(".card__title");
 const paragraph = document.querySelector(".quote");
-
-const getQuote = () => {
-	const options = {
-		method: "GET",
-		headers: {
-			"X-RapidAPI-Key": "78fa2fb87dmsh2ba59fe48f26757p17dd78jsnb130beeef2ad",
-			"X-RapidAPI-Host": "thatswhattheysaid.p.rapidapi.com",
-		},
-	};
-
-	fetch(
-		"https://thatswhattheysaid.p.rapidapi.com/theOfficequotes/Jim?id=Jim",
-		options
-	)
-		.then((response) => response.json())
-		.then((response) => console.log(response))
-		.catch((err) => console.error(err));
-};
 
 leftArrow.addEventListener("click", () => {
 	if (currentPictureIndex === 0) {
@@ -118,7 +88,7 @@ cardImage.addEventListener("click", () => {
 		})
 		.then((data) => {
 			console.log(data);
-			paragraph.innerText = "\"" + data[0].quote + "\"";
+			paragraph.innerText = '"' + data[0].quote + '"';
 		})
 		.catch((err) => console.error(err));
 });
